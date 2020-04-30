@@ -38,7 +38,7 @@ import com.deepoove.poi.xwpf.NiceXWPFDocument;
  * @author Sayi
  * @version 0.0.5
  */
-public class NumbericRenderPolicy extends AbstractRenderPolicy<NumbericRenderData> {
+public class NumericRenderPolicy extends AbstractRenderPolicy<NumbericRenderData> {
 
     @Override
     protected boolean validate(NumbericRenderData data) {

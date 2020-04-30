@@ -48,7 +48,7 @@ public class ListRenderPolicy extends AbstractRenderPolicy<List<Object>> {
             } else if (data instanceof MiniTableRenderData) {
                 MiniTableRenderPolicy.Helper.renderMiniTable(run, (MiniTableRenderData) data);
             } else if (data instanceof NumbericRenderData) {
-                NumbericRenderPolicy.Helper.renderNumberic(run, (NumbericRenderData) data);
+				NumericRenderPolicy.Helper.renderNumberic(run, (NumbericRenderData) data);
             } else if (data instanceof PictureRenderData) {
                 PictureRenderPolicy.Helper.renderPicture(bodyContainer.insertNewParagraph(run).createRun(),
                         (PictureRenderData) data);

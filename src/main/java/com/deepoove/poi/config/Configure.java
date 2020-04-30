@@ -22,15 +22,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.deepoove.poi.policy.*;
 import org.apache.commons.lang3.tuple.Pair;
 
 import com.deepoove.poi.exception.RenderException;
-import com.deepoove.poi.policy.DocxRenderPolicy;
-import com.deepoove.poi.policy.MiniTableRenderPolicy;
-import com.deepoove.poi.policy.NumbericRenderPolicy;
-import com.deepoove.poi.policy.PictureRenderPolicy;
-import com.deepoove.poi.policy.RenderPolicy;
-import com.deepoove.poi.policy.TextRenderPolicy;
 import com.deepoove.poi.policy.ref.ReferenceRenderPolicy;
 import com.deepoove.poi.render.RenderContext;
 import com.deepoove.poi.render.compute.DefaultRenderDataComputeFactory;
@@ -116,7 +111,7 @@ public class Configure implements Cloneable {
         plugin(GramerSymbol.TEXT_ALIAS, new TextRenderPolicy());
         plugin(GramerSymbol.IMAGE, new PictureRenderPolicy());
         plugin(GramerSymbol.TABLE, new MiniTableRenderPolicy());
-        plugin(GramerSymbol.NUMBERIC, new NumbericRenderPolicy());
+        plugin(GramerSymbol.NUMERIC, new NumericRenderPolicy());
         plugin(GramerSymbol.DOCX_TEMPLATE, new DocxRenderPolicy());
     }
 

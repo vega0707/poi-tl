@@ -18,6 +18,7 @@ package com.deepoove.poi.render;
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.deepoove.poi.policy.NumericRenderPolicy;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
@@ -25,7 +26,6 @@ import com.deepoove.poi.data.MiniTableRenderData;
 import com.deepoove.poi.data.NumbericRenderData;
 import com.deepoove.poi.data.PictureRenderData;
 import com.deepoove.poi.policy.MiniTableRenderPolicy;
-import com.deepoove.poi.policy.NumbericRenderPolicy;
 import com.deepoove.poi.policy.PictureRenderPolicy;
 import com.deepoove.poi.policy.TextRenderPolicy;
 
@@ -52,7 +52,7 @@ public class WhereDelegate {
     }
 
     public void renderNumberic(NumbericRenderData data) throws Exception {
-        NumbericRenderPolicy.Helper.renderNumberic(run, data);
+		NumericRenderPolicy.Helper.renderNumberic(run, data);
     }
 
     public void renderPicture(PictureRenderData data) throws Exception {
